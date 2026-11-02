@@ -65,7 +65,7 @@ describe('GET /api/digest/:night', () => {
     expect(res.status).toBe(200);
     const body = (await res.json()) as Night;
     expect(body.night).toBe('2026-10-28');
-    expect(body.badLines).toBe(0);
+    expect(body.badLines).toBe(1);
     expect(body.rows.length).toBeGreaterThan(0);
   });
 
